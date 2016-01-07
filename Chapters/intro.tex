@@ -1,0 +1,143 @@
+\chapter{Introducción}
+\label{ch:intro}
+
+
+\section{Antecedentes}
+
+Este trabajo se realizó como parte del Programa de Estímulos a la Investigación de CONACYT y la empresa   OCRMX. 
+
+La empresa OCRMX S.A. de C.V. se dedica al negocio de digitalización masiva de documentos  pertenecientes a múltiples dominios.
+Actualmente desea desarrollar un sistema completo de control de documentos y registros que sean funcionales para generar oficinas “sin papel” en los procesos relacionados con la administración empresarial de recursos humanos. Estos procesos generan documentos como: Contratos, registros de capacitación, fichas del personal, registros de baja, documentación sobre pagos de nómina, documentación sobre seguridad social, entre otros. La colección de este tipo de documentos se denomina: Expediente. La administración del expediente consta de varias fases tales como:
+\begin{itemize}
+ 
+\item	Digitalización de documentos, para poder administrar mediante el nuevo sistema las versiones históricas  (archivo muerto) de los expedientes.
+\item	Generación de documentos (ya en el sistema, sin papel).
+\item	Configuración y administración del modelo de contenido de los documentos: En esta fase es necesario que se designen los campos y componentes (fotografías, firmas, impresiones digitales, etc.) de cada documento, así como el ciclo de revisiones y aprobaciones al cual se debe someter según roles determinados de usuarios.
+\end{itemize}
+
+OCRMX busca  desarrollar un sistema de administración de contenidos (CMS) o adaptar uno abierto que le  permita tener tres sistemas principales 
+\begin{enumerate}
+
+\item 	\textbf{Colección de contenidos}:tiene por finalidad administrar la publicación y almacenamiento de la información recibida "cruda" convirtiéndola de información no estructurada a estructurada.  Este sistema debe permitir la autoría (creación de nuevos documentos), la adquisición de documentos (recolectar contenido de otras fuentes existentes), extracción de información relevante y edición de contenido. 
+\item 	\textbf{Administración de sistema y contenidos}: En el cual se almacenan los componentes. Contiene el repositorio, las interfases de administración, el flujo de trabajo  y las conexiones entre sistemas.
+\item 	\textbf{Publicación de contenidos}: Que obtiene componentes del sistema de almacenamiento y los convierte en publicaciones.
+\end{enumerate}
+
+
+La empresa OCRMX también busca aprovechar la información de sus usuarios que le permita: 
+\begin{itemize}
+
+\item Detalles sobre el contenido: tipos de componentes, en qué etapa del ciclo de vida se encuentran, etc.
+\item El nivel uso del sistema y los contenidos que genera o revisa el personal, para detectar cuellos de botella o necesidades de capacitación.
+\item Qué contenido  se utiliza en publicaciones y qué contenido puede ser destruido.
+\item 	Quién utiliza qué contenido y quién ha contribuido en cada documento.
+\end{itemize}
+
+Además el sistema de publicación es el encargado de extraer el contenido del repositorio y crear de forma automatizada publicaciones con dicho contenido.
+
+	Sus componentes y procesos principales son:
+	\begin{itemize}
+    \item 	Plantillas de publicación: Los cuales son programas que construyen publicaciones de manera automática.
+    \item 	Servicios de publicación: Herramientas que controlan qué y cómo es publicado un contenido.
+    \item 	Conexiones: Herramientas y métodos que se utilizan para incluir datos desde otros sistemas y publicaciones externas.
+    \item 	Publicaciones en línea.
+    \item 	Publicaciones genéricas: documentos electrónicos o impresiones.
+    \end{itemize}
+
+
+
+\section{Datos}
+La empresa OCRMX necesita administrar la información de una colección de arte mexicano que  consta de aproximadamente  3,500 documentos que contienen imágenes y  texto. OCRMX necesita  adaptar un sistema para manejar esta colección. El manejador que eligieron fue \href{http://dspace.org}{DSapce} y la unidad de análisis es una página. 
+Para este proyecto se contrataron dos equipos, uno de la  Universidad Nacional Autónoma de México (UNAM) y otro del Instituto Tecnológico Autónomo de México (ITAM).
+
+\section{Objetivo}
+El proyecto “Biblioteca de Arte Mexicano” busca que los usuarios puedan explorar de una manera fácil e intuitiva la historia del arte mexicano. Para lograrlo se proponen la generación de algoritmos para resumir contenido, extraer entidades y sus relaciones, análisis de tópicos en periodos determinados y relación de las obras por contenido. 
+Esperamos este proyecto contribuya  a la generación de conocimiento en áreas de alta tecnología de recursos humanos pertenecientes al programa de Maestría en Ciencia de Datos del Instituto Tecnológico Autónomo de México (ITAM).
+
+\section{Producto}
+Con las actividades descritas a continuación  el equipo del ITAM desarrolló un proceso para extraer similitudes entre documentos. Este producto se compone de tres subprocesos: procesamiento de texto, procesamiento de imágenes y  procesamiento de clickstream. Cabe destacar que el producto desarrollado es todo un proceso y  no solamente algoritmos.   
+
+Con el fin de obtener un producto completo en lugar de una colección de scripts, se optó por agrupar los algoritmos en un paquete \texttt{itm} (ITAM Text Miner). De este modo la instalación es relativamente sencilla y revisa las dependencias de \texttt{Python} automáticamente. Además esto  permite guardar ejecutables en el \texttt{PATH} del servidor, lo que permite correr los códigos desde cualquier ruta.
+
+
+
+\section{Entregables}
+
+Respondiendo a las necesidades de la empresa OCRMX el ITAM se comprometió a realizar los siguientes entregables: 
+\begin{enumerate}
+\item Definición de tecnologías, infraestructura básica y arquitectura. Definición del pipeline completo del proyecto. 
+\item Integración de los datos disponibles, documentación de la metodología y procesos empleados. Generación de estándares, metodologías y ETLs para la inserción de nuevos documentos.
+\item Documentación del listado de algoritmos, criterio de selección de éstos, entrenamiento y validación de los prototipos. \item Implementación (en conjuntos de entrenamiento y prueba), automatización y medidas de desempeño. Prototipos de presentación de resultados.
+\item Presentación del desempeño de resultados obtenidos con los modelos finales. Visualización de estos en formato digital. 
+Despliegue, automatización de procesos faltantes y documentación final.
+
+\end{enumerate}
+
+Para ello se realizaron las siguientes actividades: 
+
+\begin{itemize}
+
+\item Adquisición del estado de los datos y metadatos con los que cuenta OCRMX en la biblioteca de Arte Mexicano.
+\item	Recolección bibliográfica, artículos académicos y de la industria para establecer el estado del arte.
+\item	Adquisición de conocimiento de arquitectura de datos, tecnología y de sistemas que actualmente posee OCRMX.
+\item 	Estructura de los datos que actualmente posee OCRMX, así como de los procesos que tienen para generarlos de manera continua (formatos, flujos, tablas, motores, drivers, periodicidad, tamaño actual, crecimiento, etc.)
+\item 	Solicitud de datos  y recepción de los mismos.
+\item 	Establecimiento de arquitectura del equipo de Ciencia de Datos (DS). Construcción y montado en Amazon AWS. Conexiones y accesos. Establecimiento de niveles de seguridad.
+\item 	ETL (scripts  de extracción, transformación y carga) de datos proporcionados por OCRMX a la arquitectura de DS.
+\item 	Listado de algoritmos a implementar.
+\item 	Implementación de algoritmos. 
+\item 	Visualización y métricas de resultados.
+\item 	Establecimiento de proceso continuo.
+\item 	Sugerencias de implementación.
+\item 	Elaboración de reporte técnico
+
+\end{itemize}
+
+
+
+\section{Flujo del proyecto}
+\subsection{Arquitectura}
+Para las primeras pruebas del  proyecto “Desarrollo de un Sistema de Publicación de Biblioteca de Arte Mexicano” se eligió la nube de Amazon para almacenar y procesar los 890 Gb de información.  Para tomar esta decisión se compararon los precios de almacenamiento y de procesamiento por el tipo de máquinas que ofrece Amazon (AWS) y Google. Lo anterior considerando que ambos servicios ofrecen los servicios necesarios para el procesamiento que se requieren para el proyecto.
+
+En general las características de los servicios de almacenamiento y procesamiento son muy similares en ambas empresas, el precio cambia cuando se trata de procesamiento en computadoras más complejas. Por ejemplo, en el caso de una máquina en AWS de 8 cores y 64 GB de memoria, el precio por hora es de 7 centavos de dólar por hora. Si se compara contra la máquina más similar de Google, una máquina de 16 cores con 60 GB de memoria, el precio es muy similar en centavos de dólar por hora.
+
+Con base en lo anterior y considerando que podemos controlar las horas de procesamiento, se consideró que el precio entre ambos servicios no es un factor decisivo. Sin embargo, nuestra experiencia con los servicios que ofrece Amazon es más extensa que con los de Google. Con base en esto y dado que las diferencias de precios no son significativas para fines de procesamiento y almacenamiento, se decidió utilizar los servicios de Amazon Web Service (AWS).
+
+Para la realización de las pruebas se utilizaron los leguajes de  Python, Bash y R. Una vez definido los procesos  e integrado las ideas del equipo del GIL (UNAM) se decidió solamente usar Python para la realización del proyecto y procesar todo en los servidores de la empresa OCRMX.   
+
+\subsection{Listado de Algoritmos}
+
+Los algoritmos que componen el proceso desarrollado por el ITAM son los siguientes:
+
+
+
+\textbf{Procesamiento de Texto}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Term frequency – Inverse document frequency (TF-IDF)
+\item
+  Latent Dirichlet allocation (LDA)
+\end{itemize}
+
+\textbf{Procesamiento de Imagen}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Filtro de extracción de imágenes
+\item
+  Reducción de imágenes
+\item
+  Singular Value Decomposition (SVD) \& K-Means
+\item
+  Local Sensitive Hashing (LSH)
+\end{itemize}
+
+\textbf{Procesamiento de Clickstream}
+\begin{itemize}
+\item Estructurar
+\item Sesionizar
+\item Enriquecer 
+\end{itemize}

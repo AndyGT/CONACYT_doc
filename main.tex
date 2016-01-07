@@ -1,0 +1,98 @@
+\documentclass{tesisITAM}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+
+\setromanfont[
+BoldFont=timesbd.ttf,
+ItalicFont=timesi.ttf,
+BoldItalicFont=timesbi.ttf,
+]{times.ttf}
+% Arial
+\setsansfont[
+BoldFont=arialbd.ttf,
+ItalicFont=ariali.ttf,
+BoldItalicFont=arialbi.ttf
+]{arial.ttf}
+% Courier New
+\setmonofont[Scale=0.90,
+BoldFont=courbd.ttf,
+ItalicFont=couri.ttf,
+BoldItalicFont=courbi.ttf
+]{cour.ttf}
+
+\usepackage[backend=bibtex,style=numeric-comp,natbib=true,sortcites=true,block=space,sorting=none]{biblatex}
+\addbibresource{efinfo}
+
+
+\usepackage[font=scriptsize,labelfont=bf]{caption}
+
+
+
+\title{Proyecto: Biblioteca de Arte Mexicano}
+
+\year{2015}
+
+
+
+\begin{document}
+
+	\pagenumbering{gobble}
+	\maketitle
+	\publicationrights
+
+	\selectlanguage{spanish}
+	\setcounter{page}{1}
+	\pagenumbering{roman}
+
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\newpage
+
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% CONTENT
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\include{Chapters/intro}
+
+	\include{Chapters/producto}
+
+
+	\include{Chapters/procesamiento_texto}
+
+	\include{Chapters/procesamiento_imagen}
+
+	 \include{Chapters/logs}
+
+	\include{Chapters/guia_uso}
+
+    %\include{Chapters/trabajo_fut}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% BIBLIOGRAPHY
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\addcontentsline{toc}{chapter}{Bibliografía} %Añadimos la bibliografia a la lista de contenidos.
+	\nocite{*}
+	\phantomsection
+	\printbibliography
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	% APPENDIX
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%\appendix
+	%\include{Chapters/appendixA}
+
+
+%\clearpage
+	%
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
